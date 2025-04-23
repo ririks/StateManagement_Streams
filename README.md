@@ -9,3 +9,7 @@ Perintah kode tersebut membuat stream yang akan mengeluarkan satu warna dari lis
 
 soal 4 
 ![prak1](./steam_riri/lib/assets/praktikum1.gif)
+
+soal 5 
+Jelaskan perbedaan menggunakan listen dan await for (langkah 9) !
+Perbedaan antara listen dan await for terletak pada cara mereka menerima data dari stream. Jadi listen menggunakan pendekatan callback, jadi setiap kali ada data baru, fungsi yang diberikan akan langsung dijalankan. Sedangkan await for digunakan dalam fungsi async dan akan menunggu setiap data baru secara berurutan.

@@ -35,25 +35,20 @@ class _StreamHomePageState extends State<StreamHomePage> {
     changeColor();
   }
 
- void changeColor() async {
-    await for (var eventColor in colorStream.getColors()) {
+  void changeColor() async {
+    //await for (var eventColor in colorStream.getColors()) {
+    colorStream.getColors().listen((eventColor) {
       setState(() {
         bgColor = eventColor;
       });
-    }
+    });
   }
 
-@override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Riri'),
-      ),
-      body: Container(
-        decoration: BoxDecoration(
-          color: bgColor, 
-        ),
-      ),
+      appBar: AppBar(title: const Text('Riri')),
+      body: Container(decoration: BoxDecoration(color: bgColor)),
     );
   }
 }
