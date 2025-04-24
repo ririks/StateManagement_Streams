@@ -30,3 +30,10 @@ pada langkah 2 kita menggunakan method listen() untuk mulai menerima data dari s
 pada langkah 3 kita masih di dalam initState, setelah proses transformasi data selesai, kita memanggil setState() agar UI otomatis diperbarui setiap kali ada data baru yang masuk ke list. Jadi, setiap angka hasil transformasi yang memenuhi syarat akan langsung terlihat di aplikasi. Dengan begitu, kita akan melihat list angka yang hanya kelipatan 20 dari hasil perkalian angka acak dengan 10.
 
 ![prak3](./steam_riri/lib/assets/praktikum3.gif)
+
+soal 9 
+pada langkah 2 kita membuat subscription dari stream numberStream menggunakan method listen. Kita menyimpan hasilnya ke dalam subscription dan nanti kita bisa mengatur subscription ini, seperti menghentikannya atau menangani error-nya. Tujuannya adalah agar kita bisa lebih fleksibel dalam mengelola aliran data dari stream tersebut.
+pada langkah 6 kita menambahkan kode untuk menghentikan subscription saat widget dihapus dari layar (dispose). Kita menggunakan subscription.cancel() agar stream berhenti mengirim data dan tidak menyebabkan memory leak. 
+pada langkah 8 kita mengubah method addRandomNumber() agar sebelum menambahkan angka baru, kita memeriksa apakah subscription masih aktif.
+
+![prak4](./steam_riri/lib/assets/praktikum4.gif)
