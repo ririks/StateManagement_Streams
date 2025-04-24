@@ -23,3 +23,10 @@ soal 7
 langkah 13 ini Kita membuat method addErrorToSink() di dalam class NumberStream, fungsinya adalah untuk mengirimkan error ke dalam stream, bukan data biasa. Ini berguna jika kita ingin memberitahu UI bahwa terjadi kesalahan. 
 pada langkah 14 kita menambahkan fungsi onError di initState() agar saat stream menerima error, aplikasi bisa menampilkan pesan error tersebut ke konsol. Ini membantu kita menangani error dengan cara yang lebih baik, bukan membiarkannya terjadi tanpa diketahui. 
 pada langkah 15 kita mengganti pengiriman angka acak menjadi pengiriman error menggunakan addError() supaya bisa melihat cara stream menangani error.
+
+soal 8 
+pada langkah 1 kita menambahkan sebuah variabel baru bernama Streamtransformer dalam class _StreamHomePageState. Variabel ini digunakan untuk menyimpan stream baru hasil dari manipulasi (transformasi) stream sebelumnya, jadi data yang akan kita tampilkan nanti sudah diproses terlebih dahulu.
+pada langkah 2 kita menggunakan method listen() untuk mulai menerima data dari stream. Tapi sebelum ditambahkan ke tampilan, data angka itu dimodifikasi dulu dengan mengalikan angka aslinya dengan 10, dan hanya angka yang merupakan kelipatan 20 yang dimasukkan ke transformer. 
+pada langkah 3 kita masih di dalam initState, setelah proses transformasi data selesai, kita memanggil setState() agar UI otomatis diperbarui setiap kali ada data baru yang masuk ke list. Jadi, setiap angka hasil transformasi yang memenuhi syarat akan langsung terlihat di aplikasi. Dengan begitu, kita akan melihat list angka yang hanya kelipatan 20 dari hasil perkalian angka acak dengan 10.
+
+![prak3](./steam_riri/lib/assets/praktikum3.gif)
