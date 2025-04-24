@@ -18,3 +18,8 @@ soal 6
 Pada langkah 8 dan, kita menggunakan initState() untuk mulai mendengarkan (listen) aliran data dari numberStream, sehingga setiap angka baru yang masuk akan langsung ditampilkan di aplikasi. Sementara di langkah 10, kita membuat fungsi addRandomNumber() yang akan mengambil angka acak dari 0 sampai 9, lalu memasukkannya ke dalam stream menggunakan addNumberToSink(). Jadi, setiap kali tombol ditekan, angka acak dikirim ke stream dan otomatis tampil di layar.
 
 ![prak2](./steam_riri/lib/assets/praktikum2.gif)
+
+soal 7
+langkah 13 ini Kita membuat method addErrorToSink() di dalam class NumberStream, fungsinya adalah untuk mengirimkan error ke dalam stream, bukan data biasa. Ini berguna jika kita ingin memberitahu UI bahwa terjadi kesalahan. 
+pada langkah 14 kita menambahkan fungsi onError di initState() agar saat stream menerima error, aplikasi bisa menampilkan pesan error tersebut ke konsol. Ini membantu kita menangani error dengan cara yang lebih baik, bukan membiarkannya terjadi tanpa diketahui. 
+pada langkah 15 kita mengganti pengiriman angka acak menjadi pengiriman error menggunakan addError() supaya bisa melihat cara stream menangani error.
