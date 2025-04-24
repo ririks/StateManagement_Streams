@@ -37,3 +37,11 @@ pada langkah 6 kita menambahkan kode untuk menghentikan subscription saat widget
 pada langkah 8 kita mengubah method addRandomNumber() agar sebelum menambahkan angka baru, kita memeriksa apakah subscription masih aktif.
 
 ![prak4](./steam_riri/lib/assets/praktikum4.gif)
+
+soal 10 
+Error terjadi karena kita mencoba untuk melakukan multiple subscriptions (berlangganan lebih dari satu kali) pada Stream yang hanya mendukung single subscription secara default. Secara bawaan, Stream di Dart hanya bisa digunakan oleh satu pendengar (listener). Jadi kalau kita menambahkan dua atau lebih listen() ke Stream yang sama tanpa mengubah properti Stream-nya menjadi broadcast, maka akan muncul error.
+
+Soal 11
+Hal tersebut bisa terjadi karena stream telah diubah menjadi broadcast stream menggunakan method asBroadcastStream(), sehingga satu stream bisa didengarkan (listen) oleh lebih dari satu subscriber secara bersamaan. Ketika tombol "New Random Number" ditekan, dua listener menerima data dari stream yang sama, sehingga setiap angka acak yang dikirim akan tampil dua kali.
+
+![prak5](./steam_riri/lib/assets/praktikum5.gif)
