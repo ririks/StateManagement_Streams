@@ -45,3 +45,10 @@ Soal 11
 Hal tersebut bisa terjadi karena stream telah diubah menjadi broadcast stream menggunakan method asBroadcastStream(), sehingga satu stream bisa didengarkan (listen) oleh lebih dari satu subscriber secara bersamaan. Ketika tombol "New Random Number" ditekan, dua listener menerima data dari stream yang sama, sehingga setiap angka acak yang dikirim akan tampil dua kali.
 
 ![prak5](./steam_riri/lib/assets/praktikum5.gif)
+
+soal 12 
+
+langkah 3 ini kita membuat stream yang akan terus menghasilkan angka baru setiap detik menggunakan Stream.periodic. Jadi setiap 1 detik, stream ini akan mengirim angka yang acak baru, sehingga setiap data dikirim isinya tidak berurutan.
+langkah 7 ini kita memakai StreamBuilder untuk membangun tampilan aplikasi yang akan otomatis diperbarui setiap kali ada data baru dari stream. Ketika angka baru dikirim oleh stream, StreamBuilder akan memanggil ulang builder-nya dan menampilkan angka terbaru di layar.
+
+![prak6](./streambuilder_riri/lib/assets/praktikum6.gif)
