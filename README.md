@@ -52,3 +52,6 @@ langkah 3 ini kita membuat stream yang akan terus menghasilkan angka baru setiap
 langkah 7 ini kita memakai StreamBuilder untuk membangun tampilan aplikasi yang akan otomatis diperbarui setiap kali ada data baru dari stream. Ketika angka baru dikirim oleh stream, StreamBuilder akan memanggil ulang builder-nya dan menampilkan angka terbaru di layar.
 
 ![prak6](./streambuilder_riri/lib/assets/praktikum6.gif)
+
+soal 13 
+Di praktikum 7 ini kita menerapkan konsep BLoC (Business Logic Component) pada Flutter guna memisahkan logika bisnis dari tampilan UI. Konsep BLoC dalam praktikum ini terlihat pada penggunaan StreamController di class RandomNumberBloc yang bertugas mengelola aliran data angka acak. Data tersebut kemudian dikirimkan oleh UI melalui StreamBuilder, sehingga setiap kali tombol FloatingActionButton ditekan, data baru akan dikirim ke stream dan otomatis memperbarui tampilan tanpa logika bisnis bercampur di UI.
