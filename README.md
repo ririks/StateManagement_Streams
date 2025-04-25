@@ -55,3 +55,5 @@ langkah 7 ini kita memakai StreamBuilder untuk membangun tampilan aplikasi yang 
 
 soal 13 
 Di praktikum 7 ini kita menerapkan konsep BLoC (Business Logic Component) pada Flutter guna memisahkan logika bisnis dari tampilan UI. Konsep BLoC dalam praktikum ini terlihat pada penggunaan StreamController di class RandomNumberBloc yang bertugas mengelola aliran data angka acak. Data tersebut kemudian dikirimkan oleh UI melalui StreamBuilder, sehingga setiap kali tombol FloatingActionButton ditekan, data baru akan dikirim ke stream dan otomatis memperbarui tampilan tanpa logika bisnis bercampur di UI.
+
+![prak7](./bloc_random_riri/lib/assets/praktikum7.gif)
